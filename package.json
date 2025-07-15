@@ -6,15 +6,12 @@
 	"scripts": {
 		"dev": "node --watch index.js",
 		"start": "NODE_ENV=production npm run build:css && node index.js",
-		"build:css": "tailwindcss -i ./public/input.css -o ./public/style.css --minify",
-		"watch:css": "tailwindcss -i ./public/input.css -o ./public/style.css --watch"
+		"build:css": "tailwindcss -i ./public/style.css -o ./public/output.css --minify",
+		"watch:css": "tailwindcss -i ./public/style.css -o ./public/output.css --watch"
 	},
 	"dependencies": {
-		"@material-design-icons/svg": "^0.14.15",
-		"@tailwindcss/cli": "^4.1.11",
 		"cors": "^2.8.0",
-		"express": "^4.12.4",
-		"material-icons": "^1.13.14"
+		"express": "^4.12.4"
 	},
 	"repository": {
 		"type": "git",
@@ -32,6 +29,9 @@
 	],
 	"license": "MIT",
 	"devDependencies": {
-		"tailwindcss": "^4.1.11"
+		"@material-design-icons/svg": "^0.14.15",
+		"@tailwindcss/cli": "^4.1.11",
+		"tailwindcss": "^4.1.11",
+		"material-icons": "^1.13.14"
 	}
 }
