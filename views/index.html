@@ -2,31 +2,36 @@
 
 <html>
    <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <title>Timestamp Microservice</title>
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h5v5H7v-5z'/></svg>" />
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+      <link href="output.css" rel="stylesheet">
    </head>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
+   <body class="flex flex-col content-center items-center ">
+    <header class="w-full p-4 shadow-lg border-b-2 border-b-gray-300">
+      <h1 class="text-3xl font-bold">Timestamp Microservice</h1>
+    </header>
     <div class="container">
-      <h2>Example Usage:</h2>
+
+      <h2 class="text-2xl font-medium mb-2">How to use:</h2>
+      <p class="text-base">Change the URL path to /api/[date], where date is YYYY-MM-DD, or to Unix timestamp of the input date in milliseconds.</p>
+      <p class="text-base">The service will output the date both in UTC and Unix in JSON format!</p>
+
+      <h2 class="text-2xl font-medium mt-3 mb-2">Example Usage:</h2>
       <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
+        <li>UTC: <a href="api/2015-12-25">/api/2015-12-25</a></li>
+        <li>Unix: <a href="api/1451001600000">/api/1451001600000</a></li>
+        <li>Empty date will return invalid: <a href="api/">/api/ </a></li>
       </ul>
 
-      <h2>Example Output:</h2>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
-    </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
+      <h2 class="text-2xl font-medium mt-3 mb-1">Example Output:</h2>
+      <pre class="bg-gray-200 border border-gray-400 rounded-sm p-2 mt-2 w-max mx-auto flex">
+        <code class="flex px-4">
+          <span class="text-[#999]">{</span><span class="text-[#a52a2a]">"unix"</span><span class="text-[#999]">:</span><span class="text-[#0000ff]">1451001600000</span><span class="text-[#999]">,</span> <span class="text-[#a52a2a]">"utc"</span><span class="text-[#999]">:</span><span class="text-[#228b22]">"Fri, 25 Dec 2015 00:00:00 GMT"</span><span class="text-[#999]">}</span>
+        </code>
+      </pre>
     </div>
   </body>
 </html>
